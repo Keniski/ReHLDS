@@ -1199,7 +1199,7 @@ void SV_ClipToLinks(areanode_t *node, moveclip_t *clip)
 		else
 		{
 			// ignore all monsters but pushables
-			if (clip->type == MOVE_NOMONSTERS && touch->v.movetype != MOVETYPE_PUSHSTEP)
+			if (clip->type == MOVE_NOMONSTERS && touch->v.movetype != MOVETYPE_PUSHSTEP && touch->v.solid != SOLID_BBOX)
 				continue;
 		}
 
